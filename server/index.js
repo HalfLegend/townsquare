@@ -1,7 +1,10 @@
 const fs = require("fs");
+const path = require("path");
 const https = require("https");
 const WebSocket = require("ws");
 const client = require("prom-client");
+const express = require("express");
+const url = require("url");
 
 // Create a Registry which registers the metrics
 const register = new client.Registry();
@@ -12,7 +15,9 @@ register.setDefaultLabels({
 
 const PING_INTERVAL = 30000; // 30 seconds
 
-const options = {};
+const options = {
+  port: 8081
+};
 
 if (process.env.NODE_ENV !== "development") {
   options.cert = fs.readFileSync("cert.pem");
@@ -20,16 +25,16 @@ if (process.env.NODE_ENV !== "development") {
 }
 
 const server = https.createServer(options);
+
 const wss = new WebSocket.Server({
-  ...(process.env.NODE_ENV === "development" ? { port: 8081 } : { server }),
-  verifyClient: info =>
-    info.origin &&
-    !!info.origin.match(
-      /^https?:\/\/([^.]+\.github\.io|localhost|clocktower\.online|eddbra1nprivatetownsquare\.xyz)/i
-    )
+  ...(process.env.NODE_ENV === "development" ? { port: 8081 } : { server })
 });
 
-function noop() {}
+const app = express();
+app.use(express.static(path.join(__dirname, "public")));
+
+function noop() {
+}
 
 // calculate latency on heartbeat
 function heartbeat() {
@@ -155,7 +160,7 @@ wss.on("connection", function connection(ws, req) {
       .split(",", 1)
       .pop();
     switch (messageType) {
-      case '"ping"':
+      case "\"ping\"":
         // ping messages will only be sent host -> all or all -> host
         channels[ws.channel].forEach(function each(client) {
           if (
@@ -170,7 +175,7 @@ wss.on("connection", function connection(ws, req) {
           }
         });
         break;
-      case '"direct"':
+      case "\"direct\"":
         // handle "direct" messages differently
         console.log(
           new Date(),
@@ -249,12 +254,53 @@ wss.on("close", function close() {
   clearInterval(interval);
 });
 
+// app.listen(8080, () => {
+//   console.log('App listening at port 8080')
+// })
+
 // prod mode with stats API
 if (process.env.NODE_ENV !== "development") {
   console.log("server starting");
-  server.listen(8080);
+  server.listen(8081, "192.168.3.123");
   server.on("request", (req, res) => {
-    res.setHeader("Content-Type", register.contentType);
-    register.metrics().then(out => res.end(out));
+    let pathname = __dirname + "/public" +  url.parse(req.url).pathname;
+    if (pathname.charAt(pathname.length - 1) === "/") {
+      pathname += "index.html";
+    }
+    fs.exists(pathname, function(exists) {
+      if (exists) {
+        switch (path.extname(pathname)) {
+          case ".html":
+            res.writeHead(200, { "Content-Type": "text/html" });
+            break;
+          case ".js":
+            res.writeHead(200, { "Content-Type": "text/javascript" });
+            break;
+          case ".css":
+            res.writeHead(200, { "Content-Type": "text/css" });
+            break;
+          case ".gif":
+            res.writeHead(200, { "Content-Type": "image/gif" });
+            break;
+          case ".jpg":
+            res.writeHead(200, { "Content-Type": "image/jpeg" });
+            break;
+          case ".png":
+            res.writeHead(200, { "Content-Type": "image/png" });
+            break;
+          default:
+            res.writeHead(200, { "Content-Type": "application/octet-stream" });
+        }
+
+        fs.readFile(pathname, function(err, data) {
+          res.end(data);
+        });
+      } else {
+        res.writeHead(404, { "Content-Type": "text/html" });
+        res.end("<h1>404 Not Found</h1>");
+      }
+    });
+    // res.setHeader("Content-Type", register.contentType);
+    // register.metrics().then(out => res.end(out));
   });
 }

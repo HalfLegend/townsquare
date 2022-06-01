@@ -55,6 +55,10 @@
         <font-awesome-icon icon="random" />
         Shuffle characters
       </div>
+      <div class="button" @click="fastAssign">
+        <font-awesome-icon icon="random" />
+        快速分配
+      </div>
     </div>
   </Modal>
 </template>
@@ -64,6 +68,7 @@ import Modal from "./Modal";
 import gameJSON from "./../../game";
 import Token from "./../Token";
 import { mapGetters, mapMutations, mapState } from "vuex";
+import * as roleService from "../../role-service";
 
 const randomElement = arr => arr[Math.floor(Math.random() * arr.length)];
 
@@ -147,6 +152,56 @@ export default {
         this.$store.commit("toggleModal", "roles");
       }
     },
+    fastAssign() {
+      // console.log(this.roleSelection);
+      // let outsiders = [];
+      // let minions = [];
+      // let
+      let roles = this.roleSelection;
+      let counts = this.game[this.nonTravelers - 5];
+      let [result, left] = roleService.rollAllRole(
+        roles.townsfolk,
+        counts.townsfolk,
+        roles.outsider,
+        counts.outsider,
+        roles.minion,
+        counts.minion,
+        roles.demon,
+        counts.demon
+      );
+      this.players.forEach(player => {
+        let reminders = [];
+
+        if (player.role.team !== "traveler" && result.length) {
+          const value = result.pop();
+          this.$store.commit("players/update", {
+            player,
+            property: "role",
+            value
+          });
+          if (value.isDrunk) {
+            reminders = [...reminders, { role: "drunk", name: "Drunk" }];
+            delete value.isDrunk;
+          }
+          if (value.isNemesis) {
+            reminders = [...reminders, { role: "custom", name: "宿敌" }];
+            delete value.isNemesis;
+          }
+        }
+        this.$store.commit("players/update", {
+          player,
+          property: "reminders",
+          value: reminders
+        });
+      });
+      left.forEach((role, index) => {
+        this.$store.commit("players/setBluff", {
+          index: index,
+          role
+        });
+      });
+      this.$store.commit("toggleModal", "roles");
+    },
     ...mapMutations(["toggleModal"])
   },
   mounted: function() {
@@ -167,40 +222,51 @@ export default {
 
 ul.tokens {
   padding-left: 5%;
+
   li {
     border-radius: 50%;
     width: 5vw;
     margin: 5px;
     opacity: 0.5;
     transition: all 250ms;
+
     &.selected {
       opacity: 1;
+
       .buttons {
         display: flex;
       }
+
       .fa-exclamation-triangle {
         display: block;
       }
     }
+
     &.townsfolk {
       box-shadow: 0 0 10px $townsfolk, 0 0 10px #004cff;
     }
+
     &.outsider {
       box-shadow: 0 0 10px $outsider, 0 0 10px $outsider;
     }
+
     &.minion {
       box-shadow: 0 0 10px $minion, 0 0 10px $minion;
     }
+
     &.demon {
       box-shadow: 0 0 10px $demon, 0 0 10px $demon;
     }
+
     &.traveler {
       box-shadow: 0 0 10px $traveler, 0 0 10px $traveler;
     }
+
     &:hover {
       transform: scale(1.2);
       z-index: 10;
     }
+
     .fa-exclamation-triangle {
       position: absolute;
       color: red;
@@ -210,6 +276,7 @@ ul.tokens {
       font-size: 150%;
       display: none;
     }
+
     .buttons {
       display: none;
       position: absolute;
@@ -219,12 +286,15 @@ ul.tokens {
       z-index: 30;
       font-weight: bold;
       filter: drop-shadow(0 0 5px rgba(0, 0, 0, 1));
+
       span {
         flex-grow: 1;
       }
+
       svg {
         opacity: 0.25;
         cursor: pointer;
+
         &:hover {
           opacity: 1;
           color: red;
@@ -232,6 +302,7 @@ ul.tokens {
       }
     }
   }
+
   .count {
     opacity: 1;
     position: absolute;
@@ -242,20 +313,25 @@ ul.tokens {
     display: flex;
     align-items: center;
     justify-content: center;
+
     &:after {
       content: " ";
       display: block;
       padding-top: 100%;
     }
+
     &.townsfolk {
       color: $townsfolk;
     }
+
     &.outsider {
       color: $outsider;
     }
+
     &.minion {
       color: $minion;
     }
+
     &.demon {
       color: $demon;
     }
@@ -267,16 +343,20 @@ ul.tokens {
     display: block;
     text-align: center;
     cursor: pointer;
+
     &.checked,
     &:hover {
       color: red;
     }
+
     &.checked {
       margin-top: 10px;
     }
+
     svg {
       margin-right: 5px;
     }
+
     input {
       display: none;
     }
@@ -288,10 +368,12 @@ ul.tokens {
     bottom: 20px;
     right: 20px;
     z-index: 10;
+
     svg {
       font-size: 150%;
       vertical-align: middle;
     }
+
     span {
       display: none;
       text-align: center;
@@ -304,6 +386,7 @@ ul.tokens {
       border-radius: 10px;
       border: 2px solid black;
     }
+
     &:hover span {
       display: block;
     }

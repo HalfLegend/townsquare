@@ -124,7 +124,7 @@
                 (session.isSpectator && player.id === session.playerId)
             "
           >
-            <font-awesome-icon icon="venus-mars" />Change Pronouns
+            <font-awesome-icon icon="venus-mars" />更改头衔
           </li>
           <template v-if="!session.isSpectator">
             <li @click="changeName">
@@ -163,12 +163,12 @@
           >
             <font-awesome-icon icon="chair" />
             <template v-if="!player.id">
-              Claim seat
+              坐下
             </template>
             <template v-else-if="player.id === session.playerId">
-              Vacate seat
+              已坐下
             </template>
-            <template v-else> Seat occupied</template>
+            <template v-else>座位已被占</template>
           </li>
         </ul>
       </transition>

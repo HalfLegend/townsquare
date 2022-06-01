@@ -54,8 +54,8 @@
             <em>[G]</em>
           </li>
           <li @click="toggleNight" v-if="!session.isSpectator">
-            <template v-if="!grimoire.isNight">Switch to Night</template>
-            <template v-if="grimoire.isNight">Switch to Day</template>
+            <template v-if="!grimoire.isNight">切换到夜间</template>
+            <template v-if="grimoire.isNight">切换到白天</template>
             <em>[S]</em>
           </li>
           <li @click="toggleNightOrder" v-if="players.length">
@@ -105,7 +105,7 @@
             /></em>
           </li>
           <li @click="toggleMuted">
-            Mute Sounds
+            静音
             <em
               ><font-awesome-icon
                 :icon="['fas', grimoire.isMuted ? 'volume-mute' : 'volume-up']"
@@ -116,14 +116,14 @@
         <template v-if="tab === 'session'">
           <!-- Session -->
           <li class="headline" v-if="session.sessionId">
-            {{ session.isSpectator ? "Playing" : "Hosting" }}
+            {{ session.isSpectator ? "玩家房间" : "主机房间" }}
           </li>
           <li class="headline" v-else>
             Live Session
           </li>
           <template v-if="!session.sessionId">
-            <li @click="hostSession">Host (Storyteller)<em>[H]</em></li>
-            <li @click="joinSession">Join (Player)<em>[J]</em></li>
+            <li @click="hostSession">创建房间 (说书人)<em>[H]</em></li>
+            <li @click="joinSession">加入房间 (玩家)<em>[J]</em></li>
           </template>
           <template v-else>
             <li v-if="session.ping">
@@ -131,21 +131,21 @@
               <em>{{ session.ping }}ms</em>
             </li>
             <li @click="copySessionUrl">
-              Copy player link
+              复制加入链接
               <em><font-awesome-icon icon="copy"/></em>
             </li>
             <li v-if="!session.isSpectator" @click="distributeRoles">
-              Send Characters
+              发送角色
               <em><font-awesome-icon icon="theater-masks"/></em>
             </li>
             <li
               v-if="session.voteHistory.length || !session.isSpectator"
               @click="toggleModal('voteHistory')"
             >
-              Vote history<em>[V]</em>
+              投票历史<em>[V]</em>
             </li>
             <li @click="leaveSession">
-              Leave Session
+              离开房间
               <em>{{ session.sessionId }}</em>
             </li>
           </template>
@@ -153,30 +153,32 @@
 
         <template v-if="tab === 'players' && !session.isSpectator">
           <!-- Users -->
-          <li class="headline">Players</li>
-          <li @click="addPlayer" v-if="players.length < 20">Add<em>[A]</em></li>
+          <li class="headline">玩家</li>
+          <li @click="addPlayer" v-if="players.length < 20">
+            添加玩家<em>[A]</em>
+          </li>
           <li @click="randomizeSeatings" v-if="players.length > 2">
-            Randomize
+            座次随机
             <em><font-awesome-icon icon="dice"/></em>
           </li>
           <li @click="clearPlayers" v-if="players.length">
-            Remove all
+            移除所有玩家
             <em><font-awesome-icon icon="trash-alt"/></em>
           </li>
         </template>
 
         <template v-if="tab === 'characters'">
           <!-- Characters -->
-          <li class="headline">Characters</li>
+          <li class="headline">角色</li>
           <li v-if="!session.isSpectator" @click="toggleModal('edition')">
-            Select Edition
+            选择版本
             <em>[E]</em>
           </li>
           <li
             @click="toggleModal('roles')"
             v-if="!session.isSpectator && players.length > 4"
           >
-            Choose & Assign
+            分配角色
             <em>[C]</em>
           </li>
           <li v-if="!session.isSpectator" @click="toggleModal('fabled')">
@@ -184,7 +186,7 @@
             <em><font-awesome-icon icon="dragon"/></em>
           </li>
           <li @click="clearRoles" v-if="players.length">
-            Remove all
+            移除所有角色
             <em><font-awesome-icon icon="trash-alt"/></em>
           </li>
         </template>
@@ -193,11 +195,11 @@
           <!-- Help -->
           <li class="headline">Help</li>
           <li @click="toggleModal('reference')">
-            Reference Sheet
+            角色说明
             <em>[R]</em>
           </li>
           <li @click="toggleModal('nightOrder')">
-            Night Order Sheet
+            夜间顺序
             <em>[N]</em>
           </li>
           <li @click="toggleModal('gameState')">

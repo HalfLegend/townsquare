@@ -98,6 +98,7 @@ export default {
         const name = prompt("Add a custom reminder note");
         if (!name) return;
         value = [...player.reminders, { role: "custom", name }];
+        console.log(value)
       } else {
         value = [...player.reminders, reminder];
       }

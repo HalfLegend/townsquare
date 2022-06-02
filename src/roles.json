@@ -62,7 +62,7 @@
   },
   {
     "id": "empath",
-    "name": "移情",
+    "name": "神使/共情者",
     "edition": "tb",
     "team": "townsfolk",
     "firstNight": 36,
@@ -133,7 +133,7 @@
   },
   {
     "id": "virgin",
-    "name": "贞洁者",
+    "name": "圣女",
     "edition": "tb",
     "team": "townsfolk",
     "firstNight": 0,
@@ -148,7 +148,7 @@
   },
   {
     "id": "slayer",
-    "name": "猎手",
+    "name": "恶魔猎手",
     "edition": "tb",
     "team": "townsfolk",
     "firstNight": 0,
@@ -220,7 +220,7 @@
   },
   {
     "id": "recluse",
-    "name": "陌客",
+    "name": "隐士",
     "edition": "tb",
     "team": "outsider",
     "firstNight": 0,
@@ -229,7 +229,7 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": false,
-    "abilit": "你可能会被当作邪恶阵营、爪牙角色或恶魔角色,即使你已死亡。"
+    "abilit": "你(必然)会被当作邪恶阵营、爪牙角色或恶魔角色,即使你已死亡。"
   },
   {
     "id": "saint",
@@ -270,7 +270,7 @@
     "otherNightReminder": "将魔典展示给间谍,他想看多久就看多久。",
     "reminders": [],
     "setup": false,
-    "ability": "每天晚上,你都会看到魔典。即使你已经死了,你也可以作为一个镇民或局外来者来注册。"
+    "ability": "每天晚上,你都会看到魔典。即使你已经死了,你也(必然)作为一个镇民或局外来者来注册。"
   },
   {
     "id": "scarletwoman",

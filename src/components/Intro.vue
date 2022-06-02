@@ -2,14 +2,16 @@
   <div class="intro">
     <img src="static/apple-icon.png" alt="" class="logo" />
     <div>
-      <b>欢迎来到 血染钟楼 (南京桌游吧魔改版)</b><br/>
-      这里是血染钟楼<b>镇民广场</b>和<b>典</b><br/>
+      <b>欢迎来到 粽染钟楼 (南京桌游吧魔改版)</b><br/>
+      大吼三声：“干翻王磊”，领取粽子一个<br/>
+      <br/>
       添加玩家：右上角的
       <span class="button" @click="toggleMenu">
         <font-awesome-icon icon="cog" /> 菜单
       </span>或按<b>[A]</b>键. <br/>
-      你也可以按 <b>[J]</b>键加入房间.<br />
+      也可以按 <b>[J]</b>键加入房间.<br />
       <div class="footer">
+        感谢磊哥提供的云服务器，阿颖提供的翻译，Coco提供的粽子
         This project is free and open source and can be found on
         <a href="https://github.com/bra1n/townsquare" target="_blank">GitHub</a
         >. It is not affiliated with The Pandemonium Institute. "Blood on the

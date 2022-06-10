@@ -24,8 +24,8 @@
       >
         <em>{{ nightOrder.get(player).first }}.</em>
         <span v-if="player.role.firstNightReminder">{{
-          player.role.firstNightReminder
-        }}</span>
+            player.role.firstNightReminder
+          }}</span>
       </div>
       <div
         class="night-order other"
@@ -33,8 +33,8 @@
       >
         <em>{{ nightOrder.get(player).other }}.</em>
         <span v-if="player.role.otherNightReminder">{{
-          player.role.otherNightReminder
-        }}</span>
+            player.role.otherNightReminder
+          }}</span>
       </div>
 
       <Token
@@ -124,12 +124,19 @@
                 (session.isSpectator && player.id === session.playerId)
             "
           >
-            <font-awesome-icon icon="venus-mars" />更改头衔
+            <font-awesome-icon icon="venus-mars" />
+            更改头衔
+          </li>
+          <li
+            @click="changeName"
+            v-if="
+              !session.isSpectator ||
+                (session.isSpectator && player.id === session.playerId)
+            ">
+            <font-awesome-icon icon="user-edit" />
+            改名
           </li>
           <template v-if="!session.isSpectator">
-            <li @click="changeName">
-              <font-awesome-icon icon="user-edit" />Rename
-            </li>
             <li @click="movePlayer()" :class="{ disabled: session.lockedVote }">
               <font-awesome-icon icon="redo-alt" />
               Move player
@@ -287,7 +294,7 @@ export default {
     },
     changeName() {
       if (this.session.isSpectator) return;
-      const name = prompt("Player name", this.player.name) || this.player.name;
+      const name = prompt("格式：编号-英文名", this.player.name) || this.player.name;
       this.updatePlayer("name", name, true);
     },
     removeReminder(reminder) {
@@ -358,6 +365,7 @@ export default {
   transform-origin: left center;
   transform: perspective(200px);
 }
+
 .fold-enter,
 .fold-leave-to {
   transform: perspective(200px) rotateY(90deg);
@@ -428,6 +436,7 @@ export default {
 /****** Life token *******/
 .player {
   z-index: 2;
+
   .life {
     border-radius: 50%;
     width: 100%;
@@ -522,17 +531,20 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+
   &:after {
     content: " ";
     display: block;
     padding-top: 100%;
   }
 }
+
 .player .overlay svg {
   position: absolute;
   filter: drop-shadow(0 0 3px black);
   z-index: 2;
   cursor: pointer;
+
   &.swap,
   &.move,
   &.nominate,
@@ -544,15 +556,18 @@ export default {
     pointer-events: none;
     transition: all 250ms;
     transform: scale(0.2);
+
     * {
       stroke-width: 10px;
       stroke: white;
       fill: url(#default);
     }
+
     &:hover *,
     &.fa-hand-paper * {
       fill: url(#demon);
     }
+
     &.fa-times * {
       fill: url(#townsfolk);
     }
@@ -654,22 +669,26 @@ li.move:not(.from) .player .overlay svg.move {
   justify-content: center;
   transition: opacity 250ms;
   opacity: 0;
+
   &:before {
     content: " ";
     padding-top: 100%;
     display: block;
   }
+
   svg {
     height: 60%;
     width: 60%;
     position: absolute;
     stroke: white;
     stroke-width: 15px;
+
     path {
       fill: white;
     }
   }
 }
+
 .player.marked .marked {
   opacity: 0.5;
 }
@@ -683,6 +702,7 @@ li.move:not(.from) .player .overlay svg.move {
   filter: drop-shadow(0 0 3px black);
   cursor: default;
   z-index: 2;
+
   &.highlight {
     animation-iteration-count: 1;
     animation: redToWhite 1s normal forwards;
@@ -811,6 +831,7 @@ li.move:not(.from) .player .overlay svg.move {
   li.disabled {
     cursor: not-allowed;
     opacity: 0.5;
+
     &:hover {
       color: white;
     }
@@ -825,6 +846,7 @@ li.move:not(.from) .player .overlay svg.move {
 #townsquare.public .circle .ability {
   display: none;
 }
+
 .circle .player .shroud:hover ~ .token .ability,
 .circle .player .token:hover .ability {
   opacity: 1;
@@ -870,7 +892,7 @@ li.move:not(.from) .player .overlay svg.move {
     position: absolute;
     top: 15%;
     text-shadow: 0 1px 1px #f6dfbd, 0 -1px 1px #f6dfbd, 1px 0 1px #f6dfbd,
-      -1px 0 1px #f6dfbd;
+    -1px 0 1px #f6dfbd;
   }
 
   .icon,
@@ -896,9 +918,11 @@ li.move:not(.from) .player .overlay svg.move {
   &.add {
     opacity: 0;
     top: 30px;
+
     &:after {
       display: none;
     }
+
     .icon {
       top: 5%;
     }
@@ -908,6 +932,7 @@ li.move:not(.from) .player .overlay svg.move {
     .icon {
       display: none;
     }
+
     .text {
       font-size: 70%;
       word-break: break-word;
@@ -924,6 +949,7 @@ li.move:not(.from) .player .overlay svg.move {
   &:hover:before {
     opacity: 0;
   }
+
   &:hover:after {
     opacity: 1;
   }
@@ -945,6 +971,7 @@ li.move:not(.from) .player .overlay svg.move {
   opacity: 1;
   top: 0;
 }
+
 .circle li:hover .reminder.add:before {
   opacity: 1;
 }

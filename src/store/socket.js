@@ -1,7 +1,7 @@
 class LiveSession {
   constructor(store) {
     //this._wss = "wss://live.clocktower.online:8080/";
-    this._wss = "wss://192.168.3.123:8081/"; // uncomment if using local server with NODE_ENV=development
+    this._wss = "wss://42.192.44.230:8081/"; // uncomment if using local server with NODE_ENV=development
     this._socket = null;
     this._isSpectator = true;
     this._gamestate = [];
@@ -26,9 +26,9 @@ class LiveSession {
     this.disconnect();
     this._socket = new WebSocket(
       this._wss +
-        channel +
-        "/" +
-        (this._isSpectator ? this._store.state.session.playerId : "host")
+      channel +
+      "/" +
+      (this._isSpectator ? this._store.state.session.playerId : "host")
     );
     this._socket.addEventListener("message", this._handleMessage.bind(this));
     this._socket.onopen = this._onOpen.bind(this);
@@ -405,8 +405,8 @@ class LiveSession {
         });
         alert(
           `This session contains custom characters that can't be found. ` +
-            `Please load them before joining! ` +
-            `Missing roles: ${missing.join(", ")}`
+          `Please load them before joining! ` +
+          `Missing roles: ${missing.join(", ")}`
         );
         this.disconnect();
         this._store.commit("toggleModal", "edition");

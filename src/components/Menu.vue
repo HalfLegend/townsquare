@@ -47,10 +47,10 @@
 
         <template v-if="tab === 'grimoire'">
           <!-- Grimoire -->
-          <li class="headline">Grimoire</li>
+          <li class="headline">魔典</li>
           <li @click="toggleGrimoire" v-if="players.length">
-            <template v-if="!grimoire.isPublic">Hide</template>
-            <template v-if="grimoire.isPublic">Show</template>
+            <template v-if="!grimoire.isPublic">隐藏</template>
+            <template v-if="grimoire.isPublic">显示</template>
             <em>[G]</em>
           </li>
           <li @click="toggleNight" v-if="!session.isSpectator">
@@ -59,7 +59,7 @@
             <em>[S]</em>
           </li>
           <li @click="toggleNightOrder" v-if="players.length">
-            Night order
+            夜间顺序
             <em>
               <font-awesome-icon
                 :icon="[
@@ -70,7 +70,7 @@
             </em>
           </li>
           <li v-if="players.length">
-            Zoom
+            缩放
             <em>
               <font-awesome-icon
                 @click="setZoom(grimoire.zoom - 1)"
@@ -84,7 +84,7 @@
             </em>
           </li>
           <li @click="setBackground">
-            Background image
+            背景图片
             <em><font-awesome-icon icon="image"/></em>
           </li>
           <li v-if="!edition.isOfficial" @click="imageOptIn">
@@ -98,7 +98,7 @@
             /></em>
           </li>
           <li @click="toggleStatic">
-            Disable Animations
+            禁用动画
             <em
               ><font-awesome-icon
                 :icon="['fas', grimoire.isStatic ? 'check-square' : 'square']"

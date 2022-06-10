@@ -52,6 +52,17 @@ export function rollAllRole(
     visitorCount += 2;
   }
 
+  found = result.findIndex(value => {
+    return value.id === "godfather";
+  });
+
+  if (found >= 0) {
+    villagerCount -= 1;
+    visitorCount += 1;
+  }
+
+
+
   let goodResult = [];
   goodResult.push(...drawRoles(visitors, visitorCount));
   goodResult.push(...drawRoles(villagers, villagerCount));

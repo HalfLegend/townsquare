@@ -31,7 +31,7 @@
     >
       <h3>
         <span v-if="session.isSpectator">Other characters</span>
-        <span v-else>恶魔可伪装</span>
+        <span v-else>不在场好人</span>
         <font-awesome-icon icon="times-circle" @click.stop="toggleBluffs" />
         <font-awesome-icon icon="plus-circle" @click.stop="toggleBluffs" />
       </h3>

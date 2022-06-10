@@ -9,8 +9,8 @@
     "otherNight": 0,
     "otherNightReminder": "",
     "reminders": [
-      "Townsfolk",
-      "Wrong"
+      "镇民",
+      "错误"
     ],
     "setup": false,
     "ability": "你开始知道2个玩家中的1个是特定的镇民。"
@@ -25,8 +25,8 @@
     "otherNight": 0,
     "otherNightReminder": "",
     "reminders": [
-      "Outsider",
-      "Wrong"
+      "外来者",
+      "错误"
     ],
     "setup": false,
     "ability": "你开始知道2个玩家中的1个是特定的局外来者。（或者零个玩家在游戏中。）"
@@ -41,8 +41,8 @@
     "otherNight": 0,
     "otherNightReminder": "",
     "reminders": [
-      "Minion",
-      "Wrong"
+      "爪牙",
+      "错误"
     ],
     "setup": false,
     "ability": "你开始知道2个玩家中的1个是特定的仆从。"
@@ -62,7 +62,7 @@
   },
   {
     "id": "empath",
-    "name": "神使/共情者",
+    "name": "共情者",
     "edition": "tb",
     "team": "townsfolk",
     "firstNight": 36,
@@ -83,7 +83,7 @@
     "otherNight": 54,
     "otherNightReminder": "占卜师指着两名玩家。显示头部信号（点头‘是’,摇动‘否’）,判断其中一名玩家是否是恶魔。",
     "reminders": [
-      "Red herring"
+      "宿敌"
     ],
     "setup": false,
     "ability": "每晚,选择2名玩家:你可以了解其中一名是否是恶魔。有一名善良的玩家向你当为恶魔。"
@@ -98,7 +98,7 @@
     "otherNight": 56,
     "otherNightReminder": "如果有玩家今天白天死于处决,唤醒送葬者并对他展示那名玩家的角色标记。",
     "reminders": [
-      "Executed"
+      "被处决"
     ],
     "setup": false,
     "ability": "每天晚上*,你都会知道今天哪个角色被处决。"
@@ -113,7 +113,7 @@
     "otherNight": 13,
     "otherNightReminder": "以前受保护的玩家不再受保护。僧侣指向的是一个不是自己的玩家。请将该玩家标记为\"受保护\"",
     "reminders": [
-      "Protected"
+      "保护对象"
     ],
     "setup": false,
     "ability": "每晚*,选择一个玩家（不是你自己）:他们今晚不会受到恶魔的威胁。"
@@ -141,7 +141,7 @@
     "otherNight": 0,
     "otherNightReminder": "",
     "reminders": [
-      "No ability"
+      "失去能力"
     ],
     "setup": false,
     "ability": "你第一次被提名时,如果提名人是城镇居民,他们将立即被处决。"
@@ -156,7 +156,7 @@
     "otherNight": 0,
     "otherNightReminder": "",
     "reminders": [
-      "No ability"
+      "失去能力"
     ],
     "setup": false,
     "ability": "每局游戏限一次,你可以在白天时公开选择一名玩家:如果他是恶魔,他死亡。"
@@ -197,7 +197,7 @@
     "otherNight": 55,
     "otherNightReminder": "管家指向一名玩家。将该玩家标记为主人。",
     "reminders": [
-      "Master"
+      "主人"
     ],
     "setup": false,
     "ability": "每天晚上,选择一名玩家（而不是你自己）:明天,只有当他们也在投票时,你才可以投票。"
@@ -213,7 +213,7 @@
     "otherNightReminder": "",
     "reminders": [],
     "remindersGlobal": [
-      "Drunk"
+      "是酒鬼"
     ],
     "setup": true,
     "ability": "你不知道你是酒鬼。你以为你是一个镇民,但你不是。"
@@ -229,7 +229,7 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": false,
-    "abilit": "你(必然)会被当作邪恶阵营、爪牙角色或恶魔角色,即使你已死亡。"
+    "ability": "你(必然)会被当作邪恶阵营、爪牙角色或恶魔角色,即使你已死亡。"
   },
   {
     "id": "saint",
@@ -254,7 +254,7 @@
     "otherNight": 8,
     "otherNightReminder": "之前中毒的玩家不再中毒。中毒者指向一名玩家。标记那名玩家中毒。",
     "reminders": [
-      "Poisoned"
+      "中毒"
     ],
     "setup": false,
     "ability": "每个夜晚,你要选择一名玩家:他在当晚和明天白天中毒。"
@@ -282,7 +282,7 @@
     "otherNight": 20,
     "otherNightReminder": "如果鲜红的女人今天变成了恶魔:出示‘你是’卡,然后出示恶魔令牌。",
     "reminders": [
-      "Demon"
+      "化身恶魔"
     ],
     "setup": false,
     "ability": "如果大于等于五名玩家存活时（旅行者不计算在内）恶魔死亡,你变成那个恶魔。"
@@ -310,7 +310,7 @@
     "otherNight": 24,
     "otherNightReminder": "小恶魔指向一个玩家。该玩家死亡。如果小恶魔选择了自己:用一个备用的小恶魔令牌替换一个活着的爪牙角色的角色。显示‘你是’卡,然后显示小恶魔令牌。",
     "reminders": [
-      "Dead"
+      "死亡"
     ],
     "setup": false,
     "ability": "每晚*,选择一个玩家:他们死了。如果你这样自杀,一个爪牙角色就会变成小恶魔。"
@@ -321,33 +321,33 @@
     "edition": "tb",
     "team": "traveler",
     "firstNight": 1,
-    "firstNightReminder": "The Bureaucrat points to a player. Put the Bureaucrat's '3 votes' reminder by the chosen player's character token.",
+    "firstNightReminder": "官员指向一名玩家。将三票标记放在那名玩家旁。",
     "otherNight": 1,
-    "otherNightReminder": "The Bureaucrat points to a player. Put the Bureaucrat's '3 votes' reminder by the chosen player's character token.",
+    "otherNightReminder": "官员指向一名玩家。将三票标记放在那名玩家旁。",
     "reminders": [
-      "3 votes"
+      "3票"
     ],
     "setup": false,
-    "ability": "Each night, choose a player (not yourself): their vote counts as 3 votes tomorrow."
+    "ability": "每个夜晚，你要选择除你以外的一名玩家：明天白天，他的投票算作三票。"
   },
   {
     "id": "thief",
-    "name": "Thief",
+    "name": "窃贼",
     "edition": "tb",
     "team": "traveler",
     "firstNight": 1,
-    "firstNightReminder": "The Thief points to a player. Put the Thief's 'Negative vote' reminder by the chosen player's character token.",
+    "firstNightReminder": "窃贼指向一名玩家。将负票标记放在那名玩家旁。",
     "otherNight": 1,
-    "otherNightReminder": "The Thief points to a player. Put the Thief's 'Negative vote' reminder by the chosen player's character token.",
+    "otherNightReminder": "窃贼指向一名玩家。将负票标记放在那名玩家旁。",
     "reminders": [
-      "Negative vote"
+      "负票"
     ],
     "setup": false,
-    "ability": "Each night, choose a player (not yourself): their vote counts negatively tomorrow."
+    "ability": "每个夜晚，你要选择除你以外的一名玩家：明天白天他的投票会被算作负数。"
   },
   {
     "id": "gunslinger",
-    "name": "Gunslinger",
+    "name": "枪手",
     "edition": "tb",
     "team": "traveler",
     "firstNight": 0,
@@ -356,11 +356,11 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": false,
-    "ability": "Each day, after the 1st vote has been tallied, you may choose a player that voted: they die."
+    "ability": "每个白天，当首次投票被统计后，你可以选择一名刚投过票的玩家：他死亡。"
   },
   {
     "id": "scapegoat",
-    "name": "Scapegoat",
+    "name": "替罪羊",
     "edition": "tb",
     "team": "traveler",
     "firstNight": 0,
@@ -369,11 +369,11 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": false,
-    "ability": "If a player of your alignment is executed, you might be executed instead."
+    "ability": "如果你的阵营的一名玩家被处决，你可能会代替他被处决。"
   },
   {
     "id": "beggar",
-    "name": "Beggar",
+    "name": "乞丐",
     "edition": "tb",
     "team": "traveler",
     "firstNight": 0,
@@ -382,22 +382,22 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": false,
-    "ability": "You must use a vote token to vote. Dead players may choose to give you theirs. If so, you learn their alignment. You are sober & healthy."
+    "ability": "你只能使⽤投票标记投票。死亡的玩家可以将他的投票标记给你，如果他这么做，你会得知他的阵营。你不会中毒和醉酒。"
   },
   {
     "id": "grandmother",
-    "name": "Grandmother",
+    "name": "祖母",
     "edition": "bmr",
     "team": "townsfolk",
     "firstNight": 39,
-    "firstNightReminder": "Show the marked character token. Point to the marked player.",
+    "firstNightReminder": "指向她的孙子玩家，并展示该玩家的角色标记。",
     "otherNight": 50,
-    "otherNightReminder": "If the Grandmother\u2019s grandchild was killed by the Demon tonight: The Grandmother dies.",
+    "otherNightReminder": "如果孙子被恶魔杀死，祖母也会一同死亡。标记祖母死亡。",
     "reminders": [
-      "Grandchild"
+      "孙子"
     ],
     "setup": false,
-    "ability": "You start knowing a good player & their character. If the Demon kills them, you die too."
+    "ability": "在你的首个夜晚，你会得知一名善良玩家和他的角色。如果恶魔杀死了他，你也会死亡。"
   },
   {
     "id": "sailor",
@@ -405,126 +405,126 @@
     "edition": "bmr",
     "team": "townsfolk",
     "firstNight": 10,
-    "firstNightReminder": "The Sailor points to a living player. Either the Sailor, or the chosen player, is drunk.",
+    "firstNightReminder": "让水手选择一名存活玩家。标记那名玩家或水手醉酒。",
     "otherNight": 4,
-    "otherNightReminder": "The previously drunk player is no longer drunk. The Sailor points to a living player. Either the Sailor, or the chosen player, is drunk.",
+    "otherNightReminder": "让水手选择一名存活玩家。标记那名玩家或水手醉酒。",
     "reminders": [
-      "Drunk"
+      "醉酒"
     ],
     "setup": false,
-    "ability": "Each night, choose an alive player: either you or they are drunk until dusk. You can't die."
+    "ability": "每个夜晚，你要选择一名存活的玩家：你或他之一会醉酒直到下个黄昏。你不会死亡。"
   },
   {
     "id": "chambermaid",
-    "name": "Chambermaid",
+    "name": "侍女",
     "edition": "bmr",
     "team": "townsfolk",
     "firstNight": 50,
-    "firstNightReminder": "The Chambermaid points to two players. Show the number signal (0, 1, 2, \u2026) for how many of those players wake tonight for their ability.",
+    "firstNightReminder": "让侍女选择除自己外的两名存活玩家。给她展示数字手势来告诉她这些玩家中有几人因自身能力被唤醒。",
     "otherNight": 70,
-    "otherNightReminder": "The Chambermaid points to two players. Show the number signal (0, 1, 2, \u2026) for how many of those players wake tonight for their ability.",
+    "otherNightReminder": "让侍女选择除自己外的两名存活玩家。给她展示数字手势来告诉她这些玩家中有几人因自身能力被唤醒。",
     "reminders": [],
     "setup": false,
-    "ability": "Each night, choose 2 alive players (not yourself): you learn how many woke tonight due to their ability."
+    "ability": "每个夜晚，你要选择除你以外的两名存活的玩家：你会得知他们中有几人在当晚因其自身能力而被唤醒。"
   },
   {
     "id": "exorcist",
-    "name": "Exorcist",
+    "name": "驱魔人",
     "edition": "bmr",
     "team": "townsfolk",
     "firstNight": 0,
     "firstNightReminder": "",
     "otherNight": 22,
-    "otherNightReminder": "The Exorcist points to a player, different from the previous night. If that player is the Demon: Wake the Demon. Show the Exorcist token. Point to the Exorcist. The Demon does not act tonight.",
+    "otherNightReminder": "让驱魔人选择一名玩家，不能是上一夜他选择过的玩家。让驱魔人重新入睡。如果驱魔人选中了恶魔：唤醒恶魔。展示“该角色的能力对你生效”信息标记和驱魔人角色标记。指向驱魔人玩家。",
     "reminders": [
-      "Chosen"
+      "被选择"
     ],
     "setup": false,
-    "ability": "Each night*, choose a player (different to last night): the Demon, if chosen, learns who you are then doesn't wake tonight."
+    "ability": "每个夜晚*，你要选择一名玩家（与上个夜晚不同）：如果你选中了恶魔，他会得知你是什么角色，但他当晚不会因其自身能力而被唤醒。"
   },
   {
     "id": "innkeeper",
-    "name": "Innkeeper",
+    "name": "旅店老板",
     "edition": "bmr",
     "team": "townsfolk",
     "firstNight": 0,
     "firstNightReminder": "",
     "otherNight": 9,
-    "otherNightReminder": "The previously protected and drunk players lose those markers. The Innkeeper points to two players. Those players are protected. One is drunk.",
+    "otherNightReminder": "让旅店老板选择两名玩家。标记这两名玩家不会死亡，并标记其中一人醉酒；当旅馆老板保护自己时，自己可能醉酒而让保护不生效。",
     "reminders": [
-      "Protected",
-      "Drunk"
+      "被保护",
+      "醉酒"
     ],
     "setup": false,
-    "ability": "Each night*, choose 2 players: they can't die tonight, but 1 is drunk until dusk."
+    "ability": "每个夜晚*，你要选择两名玩家：他们当晚不会死亡，但其中一人会醉酒到下个黄昏；若保护自己，自己可能醉酒而，保护不生效。"
   },
   {
     "id": "gambler",
-    "name": "Gambler",
+    "name": "赌徒",
     "edition": "bmr",
     "team": "townsfolk",
     "firstNight": 0,
     "firstNightReminder": "",
     "otherNight": 11,
-    "otherNightReminder": "The Gambler points to a player, and a character on their sheet. If incorrect, the Gambler dies.",
+    "otherNightReminder": "让赌徒选择一名玩家和一个角色。如果赌徒猜错了，标记赌徒死亡。",
     "reminders": [
-      "Dead"
+      "死亡"
     ],
     "setup": false,
-    "ability": "Each night*, choose a player & guess their character: if you guess wrong, you die."
+    "ability": "每个夜晚*，你要选择一名玩家并猜测他的角色：如果你猜错了，你会死亡。"
   },
   {
     "id": "gossip",
-    "name": "Gossip",
+    "name": "造谣者",
     "edition": "bmr",
     "team": "townsfolk",
     "firstNight": 0,
     "firstNightReminder": "",
     "otherNight": 47,
-    "otherNightReminder": "If the Gossip\u2019s public statement was true: Choose a player not protected from dying tonight. That player dies.",
+    "otherNightReminder": "如果白天的声明为真，会有一名玩家死亡，并由说书人来选择一名玩家，标记该玩家死亡。",
     "reminders": [
       "Dead"
     ],
     "setup": false,
-    "ability": "Each day, you may make a public statement. Tonight, if it was true, a player dies."
+    "ability": "每个白天，你可以公开发表一个声明。如果该声明正确，在当晚会有一名玩家死亡。"
   },
   {
     "id": "courtier",
-    "name": "Courtier",
+    "name": "侍臣",
     "edition": "bmr",
     "team": "townsfolk",
     "firstNight": 19,
-    "firstNightReminder": "The Courtier either shows a 'no' head signal, or points to a character on the sheet. If the Courtier used their ability: If that character is in play, that player is drunk.",
+    "firstNightReminder": "侍臣可以选择一个角色。如果他这么做了，标记侍臣失去能力，标记被选择的角色所对应的玩家醉酒。之后的夜晚无需再唤醒侍臣。",
     "otherNight": 10,
-    "otherNightReminder": "Reduce the remaining number of days the marked player is poisoned. If the Courtier has not yet used their ability: The Courtier either shows a 'no' head signal, or points to a character on the sheet. If the Courtier used their ability: If that character is in play, that player is drunk.",
+    "otherNightReminder": "侍臣可以选择一个角色。如果他这么做了，标记侍臣失去能力，标记被选择的角色所对应的玩家醉酒。之后的夜晚无需再唤醒侍臣。",
     "reminders": [
-      "Drunk 3",
-      "Drunk 2",
-      "Drunk 1",
-      "No ability"
+      "醉酒 1",
+      "醉酒 2",
+      "醉酒 3",
+      "失去能力"
     ],
     "setup": false,
-    "ability": "Once per game, at night, choose a character: they are drunk for 3 nights & 3 days."
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一个角色：如果该角色在场，该角色之一从当晚开始醉酒三天三夜。"
   },
   {
     "id": "professor",
-    "name": "Professor",
+    "name": "教授",
     "edition": "bmr",
     "team": "townsfolk",
     "firstNight": 0,
     "firstNightReminder": "",
     "otherNight": 45,
-    "otherNightReminder": "If the Professor has not used their ability: The Professor either shakes their head no, or points to a player. If that player is a Townsfolk, they are now alive.",
+    "otherNightReminder": "教授可以选择一名死亡玩家。如果他这么做了，标记教授失去能力，然后如果那名玩家是镇民，标记那名玩家被复活。之后的夜晚无需再唤醒教授。",
     "reminders": [
-      "Alive",
-      "No ability"
+      "复活",
+      "失去能力"
     ],
     "setup": false,
-    "ability": "Once per game, at night*, choose a dead player: if they are a Townsfolk, they are resurrected."
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名死亡的玩家：如果他是镇民，你会将他起死回生。"
   },
   {
     "id": "minstrel",
-    "name": "Minstrel",
+    "name": "吟游诗人",
     "edition": "bmr",
     "team": "townsfolk",
     "firstNight": 0,
@@ -532,14 +532,14 @@
     "otherNight": 0,
     "otherNightReminder": "",
     "reminders": [
-      "Everyone drunk"
+      "全员醉酒"
     ],
     "setup": false,
-    "ability": "When a Minion dies by execution, all other players (except Travellers) are drunk until dusk tomorrow."
+    "ability": "当一名爪牙死于处决时，除了你和旅行者以外的所有其他玩家醉酒直到明天黄昏。"
   },
   {
     "id": "tealady",
-    "name": "Tea Lady",
+    "name": "茶艺师",
     "edition": "bmr",
     "team": "townsfolk",
     "firstNight": 0,
@@ -547,14 +547,14 @@
     "otherNight": 0,
     "otherNightReminder": "",
     "reminders": [
-      "Can not die"
+      "不会死亡"
     ],
     "setup": false,
-    "ability": "If both your alive neighbours are good, they can't die."
+    "ability": "如果与你邻近(跳过死亡)的两名存活的玩家是善良的，他们不会死亡。"
   },
   {
     "id": "pacifist",
-    "name": "Pacifist",
+    "name": "和平主义者",
     "edition": "bmr",
     "team": "townsfolk",
     "firstNight": 0,
@@ -563,11 +563,11 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": false,
-    "ability": "Executed good players might not die."
+    "ability": "魔改：每局限一次，在入夜前可以救下当前被处决的玩家。原技能：被处决的善良玩家可能不会死亡。"
   },
   {
     "id": "fool",
-    "name": "Fool",
+    "name": "弄臣",
     "edition": "bmr",
     "team": "townsfolk",
     "firstNight": 0,
@@ -575,10 +575,10 @@
     "otherNight": 0,
     "otherNightReminder": "",
     "reminders": [
-      "No ability"
+      "失去能力"
     ],
     "setup": false,
-    "ability": "The first time you die, you don't."
+    "ability": "当你首次将要死亡时，你不会死亡。"
   },
   {
     "id": "tinker",
@@ -588,31 +588,31 @@
     "firstNight": 0,
     "firstNightReminder": "",
     "otherNight": 48,
-    "otherNightReminder": "The Tinker might die.",
+    "otherNightReminder": "修补匠可能会死亡。如果说书人选择让修补匠死亡，放置死亡标记。",
     "reminders": [
-      "Dead"
+      "死亡"
     ],
     "setup": false,
-    "ability": "You might die at any time."
+    "ability": "你随时可能死亡。"
   },
   {
     "id": "moonchild",
-    "name": "Moonchild",
+    "name": "月之子",
     "edition": "bmr",
     "team": "outsider",
     "firstNight": 0,
     "firstNightReminder": "",
     "otherNight": 49,
-    "otherNightReminder": "If the Moonchild used their ability to target a player today: If that player is good, they die.",
+    "otherNightReminder": "如果月之子在白天触发了死亡能力并选择了一名善良玩家，该玩家死亡。标记那名玩家死亡。",
     "reminders": [
-      "Dead"
+      "死亡"
     ],
     "setup": false,
-    "ability": "When you learn that you died, publicly choose 1 alive player. Tonight, if it was a good player, they die."
+    "ability": "当你得知你死亡时，你要公开选择一名存活的玩家。如果他是善良的，在当晚他会死亡。"
   },
   {
     "id": "goon",
-    "name": "Goon",
+    "name": "莽夫",
     "edition": "bmr",
     "team": "outsider",
     "firstNight": 0,
@@ -620,78 +620,79 @@
     "otherNight": 0,
     "otherNightReminder": "",
     "reminders": [
-      "Drunk"
+      "醉酒"
     ],
     "setup": false,
-    "ability": "Each night, the 1st player to choose you with their ability is drunk until dusk. You become their alignment."
+    "ability": "每个夜晚，首个使用其自身能力选择了你的玩家会醉酒直到下个黄昏。你会转变为他的阵营。"
   },
   {
     "id": "lunatic",
-    "name": "Lunatic",
+    "name": "疯子",
     "edition": "bmr",
     "team": "outsider",
     "firstNight": 7,
-    "firstNightReminder": "If 7 or more players: Show the Lunatic a number of arbitrary 'Minions', players equal to the number of Minions in play. Show 3 character tokens of arbitrary good characters. If the token received by the Lunatic is a Demon that would wake tonight: Allow the Lunatic to do the Demon actions. Place their 'attack' markers. Wake the Demon. Show the Demon\u2019s real character token. Show them the Lunatic player. If the Lunatic attacked players: Show the real demon each marked player. Remove any Lunatic 'attack' markers.",
+    "firstNightReminder": "如果有七名或更多玩家，唤醒疯子：展示“他们是你的爪牙”信息标记。指向任意对应数量的玩家。展示“这些角色不在场”信息标记。展示三个善良角色。让疯子重新入睡。唤醒恶魔。展示“你是”信息标记和恶魔角色标记。展示“这名玩家是”信息标记和疯子角色标记，然后指向疯子玩家。",
     "otherNight": 21,
-    "otherNightReminder": "Allow the Lunatic to do the actions of the Demon. Place their 'attack' markers. If the Lunatic selected players: Wake the Demon. Show the 'attack' marker, then point to each marked player. Remove any Lunatic 'attack' markers.",
+    "otherNightReminder": "做任何需要做的事情来模拟一位恶魔的行动。让疯子重新入睡。唤醒恶魔。对恶魔展示疯子角色标记，并指向疯子玩家，随后是疯子的攻击目标。",
     "reminders": [
-      "Attack 1",
-      "Attack 2",
-      "Attack 3"
+      "选择击杀"
+    ],
+    "remindersGlobal": [
+      "是疯子"
     ],
     "setup": false,
-    "ability": "You think you are a Demon, but you are not. The Demon knows who you are & who you choose at night."
+    "ability": "你以为你是一个恶魔，但其实你不是。恶魔知道你是什么角色以及你在每个夜晚选择了哪些玩家。"
   },
   {
     "id": "godfather",
-    "name": "Godfather",
+    "name": "教父",
     "edition": "bmr",
     "team": "minion",
     "firstNight": 21,
-    "firstNightReminder": "Show each of the Outsider tokens in play.",
+    "firstNightReminder": "对他展示所有在场的外来者标记。",
     "otherNight": 38,
-    "otherNightReminder": "If an Outsider died today: The Godfather points to a player. That player dies.",
+    "otherNightReminder": "如果有外来者在今天白天死亡，让教父选择一名玩家。标记那名玩家死亡。",
     "reminders": [
-      "Died today",
-      "Dead"
+      "死于今日",
+      "死亡"
     ],
     "setup": true,
-    "ability": "You start knowing which Outsiders are in play. If 1 died today, choose a player tonight: they die. [\u22121 or +1 Outsider]"
+    "ability": "在你的首个夜晚，你会得知有哪些外来者角色在场。如果有外来者在白天死亡，你会在当晚被唤醒并且你要选择一名玩家：他死亡。[-1或+1外来者]"
   },
   {
     "id": "devilsadvocate",
-    "name": "Devil's Advocate",
+    "name": "魔鬼代言人",
     "edition": "bmr",
     "team": "minion",
     "firstNight": 22,
-    "firstNightReminder": "The Devil\u2019s Advocate points to a living player. That player survives execution tomorrow.",
+    "firstNightReminder": "让魔鬼代言人选择一名存活玩家。标记那名玩家处决不死。",
     "otherNight": 14,
-    "otherNightReminder": "The Devil\u2019s Advocate points to a living player, different from the previous night. That player survives execution tomorrow.",
+    "otherNightReminder": "让魔鬼代言人选择一名存活玩家，不能是上一夜他选择过的玩家。标记那名玩家处决不死。",
     "reminders": [
-      "Survives execution"
+      "处决不死"
     ],
     "setup": false,
-    "ability": "Each night, choose a living player (different to last night): if executed tomorrow, they don't die."
+    "ability": "每个夜晚，你要选择一名存活的玩家（与上个夜晚不同）：如果明天白天他被处决，他不会死亡。"
   },
   {
     "id": "assassin",
-    "name": "Assassin",
+    "name": "刺客",
     "edition": "bmr",
     "team": "minion",
     "firstNight": 0,
     "firstNightReminder": "",
     "otherNight": 37,
-    "otherNightReminder": "If the Assassin has not yet used their ability: The Assassin either shows the 'no' head signal, or points to a player. That player dies.",
+    "otherNightReminder": "刺客可以选择一名玩家。如果他这么做了，标记那名玩家死亡，且刺客失去能力，之后的夜晚无需再唤醒刺客。",
     "reminders": [
-      "Dead",
-      "No ability"
+      "死亡",
+      "失去能力"
     ],
     "setup": false,
-    "ability": "Once per game, at night*, choose a player: they die, even if for some reason they could not."
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：他死亡，即使因为任何原因让他不会死亡。"
   },
   {
     "id": "mastermind",
-    "name": "Mastermind",
+    "name": "主谋",
     "edition": "bmr",
     "team": "minion",
     "firstNight": 0,
@@ -700,90 +701,90 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": false,
-    "ability": "If the Demon dies by execution (ending the game), play for 1 more day. If a player is then executed, their team loses."
+    "ability": "如果恶魔因为死于处决而因此导致游戏结束时，再额外进行一个夜晚和一个白天。在那个白天如果有玩家被处决，他的阵营落败。"
   },
   {
     "id": "zombuul",
-    "name": "Zombuul",
+    "name": "僵尸",
     "edition": "bmr",
     "team": "demon",
     "firstNight": 0,
     "firstNightReminder": "",
     "otherNight": 25,
-    "otherNightReminder": "If no-one died during the day: The Zombuul points to a player. That player dies.",
+    "otherNightReminder": "如果今天白天没有人死亡，让僵怖选择一名玩家。标记那名玩家死亡。",
     "reminders": [
-      "Died today",
-      "Dead"
+      "死于今日",
+      "死亡"
     ],
     "setup": false,
-    "ability": "Each night*, if no-one died today, choose a player: they die. The 1st time you die, you live but register as dead."
+    "ability": "每个夜晚*，如果今天白天没有⼈死亡，你会被唤醒并要选择一名玩家：他死亡。当你首次死亡后，你仍存活，但会被当作死亡。"
   },
   {
     "id": "pukka",
-    "name": "Pukka",
+    "name": "普卡",
     "edition": "bmr",
     "team": "demon",
     "firstNight": 28,
-    "firstNightReminder": "The Pukka points to a player. That player is poisoned.",
+    "firstNightReminder": "让普卡选择一名玩家。标记那名玩家中毒。",
     "otherNight": 26,
-    "otherNightReminder": "The Pukka points to a player. That player is poisoned. The previously poisoned player dies. ",
+    "otherNightReminder": "让普卡选择一名玩家。标记那名玩家中毒。【圆】上一个因普卡中毒的玩家死亡，随后恢复健康。",
     "reminders": [
-      "Poisoned",
-      "Dead"
+      "中毒",
+      "死亡"
     ],
     "setup": false,
-    "ability": "Each night, choose a player: they are poisoned. The previously poisoned player dies then becomes healthy."
+    "ability": "每个夜晚，你要选择一名玩家：他中毒。上个因你的能力中毒的玩家会死亡并恢复健康。"
   },
   {
     "id": "shabaloth",
-    "name": "Shabaloth",
+    "name": "暴食",
     "edition": "bmr",
     "team": "demon",
     "firstNight": 0,
     "firstNightReminder": "",
     "otherNight": 27,
-    "otherNightReminder": "One player that the Shabaloth chose the previous night might be resurrected. The Shabaloth points to two players. Those players die.",
+    "otherNightReminder": "上一夜被暴食选择且当前已死亡的玩家之一可能被反刍，如果被反刍，标记那名玩家被复活。让沙巴洛斯选择两名玩家。标记这两名玩家死亡。",
     "reminders": [
-      "Dead",
-      "Alive"
+      "死亡",
+      "复活"
     ],
     "setup": false,
-    "ability": "Each night*, choose 2 players: they die. A dead player you chose last night might be regurgitated."
+    "ability": "每个夜晚*，你要选择两名玩家：他们死亡。你的上个夜晚选择过的且当前死亡的玩家可能会被你反刍。"
   },
   {
     "id": "po",
-    "name": "Po",
+    "name": "珀",
     "edition": "bmr",
     "team": "demon",
     "firstNight": 0,
     "firstNightReminder": "",
     "otherNight": 28,
-    "otherNightReminder": "If the Po chose no-one the previous night: The Po points to three players. Otherwise: The Po either shows the 'no' head signal , or points to a player. Chosen players die",
+    "otherNightReminder": "珀可以选择一名玩家；或如果上一次他被唤醒时未做选择，让他选择三名玩家。标记这些玩家死亡。",
     "reminders": [
-      "Dead",
-      "3 attacks"
+      "死亡",
+      "畜力"
     ],
     "setup": false,
-    "ability": "Each night*, you may choose a player: they die. If your last choice was no-one, choose 3 players tonight."
+    "ability": "每个夜晚*，你可以选择一名玩家：他死亡。如果你上次选择时没有选择任何玩家，当晚你要选择三名玩家：他们死亡。"
   },
   {
     "id": "apprentice",
-    "name": "Apprentice",
+    "name": "学徒",
     "edition": "bmr",
     "team": "traveler",
     "firstNight": 1,
-    "firstNightReminder": "Show the Apprentice the 'You are' card, then a Townsfolk or Minion token. In the Grimoire, replace the Apprentice token with that character token, and put the Apprentice's 'Is the Apprentice' reminder by that character token.",
+    "firstNightReminder": "对学徒展示一个镇民或爪牙标记。在魔典中，用那个角色标记代替学徒标记，并在一旁标识该玩家是学徒。",
     "otherNight": 0,
     "otherNightReminder": "",
     "reminders": [
-      "Is the Apprentice"
+      "是学徒"
     ],
     "setup": false,
-    "ability": "On your 1st night, you gain a Townsfolk ability (if good), or a Minion ability (if evil)."
+    "ability": "在你的首个夜晚，如果你是善良的，你会获得一个镇民角色的能力；如果你是邪恶的，你会获得一个爪牙角色的能力。"
   },
   {
     "id": "matron",
-    "name": "Matron",
+    "name": "女舍监",
     "edition": "bmr",
     "team": "traveler",
     "firstNight": 0,
@@ -792,11 +793,11 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": false,
-    "ability": "Each day, you may choose up to 3 sets of 2 players to swap seats. Players may not leave their seats to talk in private."
+    "ability": "每个白天，你可以选择至多三对玩家交换座位。玩家不能离开座位私聊。"
   },
   {
     "id": "judge",
-    "name": "Judge",
+    "name": "法官",
     "edition": "bmr",
     "team": "traveler",
     "firstNight": 0,
@@ -804,14 +805,14 @@
     "otherNight": 0,
     "otherNightReminder": "",
     "reminders": [
-      "No ability"
+      "失去能力"
     ],
     "setup": false,
-    "ability": "Once per game, if another player nominated, you may choose to force the current execution to pass or fail."
+    "ability": "每局游戏限一次，如果其他玩家发起了提名，你可以选择让本次提名直接执行处决或让投票无效。"
   },
   {
     "id": "bishop",
-    "name": "Bishop",
+    "name": "主教",
     "edition": "bmr",
     "team": "traveler",
     "firstNight": 0,
@@ -819,15 +820,15 @@
     "otherNight": 0,
     "otherNightReminder": "",
     "reminders": [
-      "Nominate good",
-      "Nominate evil"
+      "提名善良方",
+      "提名邪恶方"
     ],
     "setup": false,
-    "ability": "Only the Storyteller can nominate. At least 1 opposite player must be nominated each day."
+    "ability": "只有说书人可以发起提名。每个白天说书人至少要提名一名你对立阵营的玩家。"
   },
   {
     "id": "voudon",
-    "name": "Voudon",
+    "name": "巫毒",
     "edition": "bmr",
     "team": "traveler",
     "firstNight": 0,
@@ -836,7 +837,7 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": false,
-    "ability": "Only you and the dead can vote. They don't need a vote token to do so. A 50% majority is not required."
+    "ability": "只有你和死亡的玩家可以投票，且投票不需要使用投票标记。忽略票数需要过半的要求。"
   },
   {
     "id": "clockmaker",

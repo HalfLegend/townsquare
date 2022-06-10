@@ -180,7 +180,7 @@ export default {
             value
           });
           if (value.isDrunk) {
-            reminders = [...reminders, { role: "drunk", name: "Drunk" }];
+            reminders = [...reminders, { role: "drunk", name: "是酒鬼" }];
             delete value.isDrunk;
           }
           if (value.isNemesis) {

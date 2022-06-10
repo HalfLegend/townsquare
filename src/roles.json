@@ -401,7 +401,7 @@
   },
   {
     "id": "sailor",
-    "name": "Sailor",
+    "name": "水手",
     "edition": "bmr",
     "team": "townsfolk",
     "firstNight": 10,
@@ -582,7 +582,7 @@
   },
   {
     "id": "tinker",
-    "name": "Tinker",
+    "name": "修补匠",
     "edition": "bmr",
     "team": "outsider",
     "firstNight": 0,

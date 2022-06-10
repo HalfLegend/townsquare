@@ -293,7 +293,8 @@ export default {
       }
     },
     changeName() {
-      if (this.session.isSpectator) return;
+      if (this.session.isSpectator && this.player.id !== this.session.playerId)
+        return;
       const name = prompt("格式：编号-英文名", this.player.name) || this.player.name;
       this.updatePlayer("name", name, true);
     },

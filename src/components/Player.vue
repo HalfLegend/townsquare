@@ -307,7 +307,8 @@ export default {
       if (
         this.session.isSpectator &&
         property !== "reminders" &&
-        property !== "pronouns"
+        property !== "pronouns" &&
+        property !== "name"
       )
         return;
       this.$store.commit("players/update", {

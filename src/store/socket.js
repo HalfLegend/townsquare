@@ -205,6 +205,9 @@ class LiveSession {
       case "pronouns":
         this._updatePlayerPronouns(params);
         break;
+      case "name":
+        this._updatePlayerName(params);
+        break;
     }
   }
 
@@ -523,6 +526,24 @@ class LiveSession {
   }
 
   /**
+   * Publish a player name update
+   * @param player
+   * @param value
+   * @param isFromSockets
+   */
+  sendPlayerName({ player, value, isFromSockets }) {
+    //send pronoun only for the seated player or storyteller
+    //Do not re-send pronoun data for an update that was recieved from the sockets layer
+    if (
+      isFromSockets ||
+      (this._isSpectator && this._store.state.session.playerId !== player.id)
+    )
+      return;
+    const index = this._store.state.players.players.indexOf(player);
+    this._send("name", [index, value]);
+  }
+
+  /**
    * Update a pronouns based on incoming data.
    * @param index
    * @param value
@@ -534,6 +555,17 @@ class LiveSession {
     this._store.commit("players/update", {
       player,
       property: "pronouns",
+      value,
+      isFromSockets: true
+    });
+  }
+
+  _updatePlayerName([index, value]) {
+    const player = this._store.state.players.players[index];
+
+    this._store.commit("players/update", {
+      player,
+      property: "name",
       value,
       isFromSockets: true
     });
@@ -910,6 +942,8 @@ export default store => {
       case "players/update":
         if (payload.property === "pronouns") {
           session.sendPlayerPronouns(payload);
+        } else if (payload.property === "name") {
+          session.sendPlayerName(payload);
         } else {
           session.sendPlayer(payload);
         }

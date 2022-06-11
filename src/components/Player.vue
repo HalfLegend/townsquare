@@ -982,4 +982,11 @@ li.move:not(.from) .player .overlay svg.move {
   opacity: 0;
   pointer-events: none;
 }
+
+@media (max-aspect-ratio: 1 / 1) {
+  .circle > li {
+    top: calc(50% - 50vw) !important;
+    height: 50vw !important;
+  }
+}
 </style>

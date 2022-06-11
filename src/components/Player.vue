@@ -108,7 +108,7 @@
         @click="isMenuOpen = !isMenuOpen"
         :class="{ active: isMenuOpen }"
       >
-        <span>{{ player.name }}</span>
+        <span>{{ players.indexOf(player) + 1 }}. {{ player.name }}</span>
         <font-awesome-icon icon="venus-mars" v-if="player.pronouns" />
         <div class="pronouns" v-if="player.pronouns">
           <span>{{ player.pronouns }}</span>
@@ -295,7 +295,7 @@ export default {
     changeName() {
       if (this.session.isSpectator && this.player.id !== this.session.playerId)
         return;
-      const name = prompt("格式：编号-英文名", this.player.name) || this.player.name;
+      const name = prompt("请输入名字：", this.player.name) || this.player.name;
       this.updatePlayer("name", name, true);
     },
     removeReminder(reminder) {

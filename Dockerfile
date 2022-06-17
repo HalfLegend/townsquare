@@ -1,4 +1,4 @@
-FROM node:16.14.0
+FROM node:16.9.0-alpine
 
 WORKDIR /var/app/
 
@@ -10,6 +10,6 @@ COPY . .
 RUN npm run build
 RUN npm install -g pm2
 
-CMD [ "pm2-runtime", "start", "ecosystem.config.js" ]
+CMD [ "pm2-runtime", "start", "server/ecosystem.config.js" ]
 VOLUME [ "/var/app/log" ]
 EXPOSE 8081

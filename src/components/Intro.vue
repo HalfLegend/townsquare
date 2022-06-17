@@ -2,10 +2,10 @@
   <div class="intro">
     <img src="static/apple-icon.png" alt="" class="logo" />
     <div>
-      <b>欢迎来到 血染钟楼 (桌游吧魔改版)</b><br/>
-      今天，你染了吗？<br/>
+      <b>欢迎来到 Fine血染钟楼(魔改版) </b><br/>
+      南京无锡小伙伴们，大屏面对面<br/>
       <br/>
-      添加玩家：右上角的
+      添加玩家：使用右上角的
       <span class="button" @click="toggleMenu">
         <font-awesome-icon icon="cog" /> 菜单
       </span>或按<b>[A]</b>键. <br/>

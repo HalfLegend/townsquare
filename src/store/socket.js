@@ -1,7 +1,7 @@
 class LiveSession {
   constructor(store) {
     //this._wss = "wss://live.clocktower.online:8080/";
-    this._wss = "wss://townsquare.topol.xyz"; // uncomment if using local server with NODE_ENV=development
+    this._wss = "wss://townsquare.topol.xyz:443"; // uncomment if using local server with NODE_ENV=development
     this._socket = null;
     this._isSpectator = true;
     this._gamestate = [];

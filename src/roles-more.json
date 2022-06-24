@@ -1199,7 +1199,7 @@
     "id": "sweetheart",
     "edition": "snv",
     "team": "outsider",
-    "name_eng": "心上人",
+    "name_eng": "Sweetheart",
     "firstNight": 0,
     "ability": "当你死亡时，会有一名玩家开始醉酒。"
   },
@@ -1289,8 +1289,8 @@
   {
     "firstNightReminder": "",
     "isOfficial": true,
-    "otherNightReminder": "让熬药巫婆选择一名玩家和一个角色。如果她选择的角色不在场：让麻脸巫婆重新入睡。唤醒她的目标玩家。对该玩家展示“你是”信息标记和他的新角色标记。",
-    "name": "熬药巫婆",
+    "otherNightReminder": "让麻脸巫婆选择一名玩家和一个角色。如果她选择的角色不在场：让麻脸巫婆重新入睡。唤醒她的目标玩家。对该玩家展示“你是”信息标记和他的新角色标记。",
+    "name": "麻脸巫婆",
     "otherNight": 17,
     "setup": false,
     "reminders": [],

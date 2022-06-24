@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const http = require("https");
+const http = require("http");
 const WebSocket = require("ws");
 const client = require("prom-client");
 const express = require("express");
@@ -17,13 +17,8 @@ const PING_INTERVAL = 30000; // 30 seconds
 const app = express();
 app.use(express.static(path.join(__dirname, "..", "dist")));
 
-const server = http.createServer(
-  {
-    key: fs.readFileSync("key.pem"),
-    cert: fs.readFileSync("cert.pem")
-  },
-  app
-);
+const server = http.createServer(app)
+
 
 const wss = new WebSocket.Server({ server });
 
@@ -254,5 +249,5 @@ wss.on("close", function close() {
 // prod mode with stats API
 console.log("server starting");
 server.listen(8081, "0.0.0.0", e => {
-  console.log(e, "listening on port 443...");
+  console.log(e, "listening on port 8081 ...");
 });

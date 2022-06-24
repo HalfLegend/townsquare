@@ -52,6 +52,7 @@ export function rollAllRole(
     visitorCount += 2;
   }
 
+  // for 血月
   found = result.findIndex(value => {
     return value.id === "godfather";
   });
@@ -61,7 +62,25 @@ export function rollAllRole(
     visitorCount += 1;
   }
 
+  // for 紫罗兰
+  found = result.findIndex(value => {
+    return value.id === "fanggu";
+  });
 
+  if (found >= 0) {
+    villagerCount -= 1;
+    visitorCount += 1;
+  }
+  found = result.findIndex(value => {
+    return value.id === "vigormortis";
+  });
+
+  if (found >= 0) {
+    if (visitorCount > 0) {
+      villagerCount += 1;
+      visitorCount -= 1;
+    }
+  }
 
   let goodResult = [];
   goodResult.push(...drawRoles(visitors, visitorCount));

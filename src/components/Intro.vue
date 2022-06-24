@@ -3,7 +3,6 @@
     <img src="static/apple-icon.png" alt="" class="logo" />
     <div>
       <b>欢迎来到 Fine血染钟楼(魔改版) </b><br/>
-      南京无锡小伙伴们，大屏面对面<br/>
       今天你染了吗？<br/>
       <br/>
       添加玩家：使用右上角的

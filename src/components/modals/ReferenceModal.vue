@@ -118,6 +118,12 @@ export default {
       return jinxed;
     },
     rolesGrouped: function() {
+      function moveGroup(group, from, to) {
+        if (group[from]) {
+          group[to] = group[from];
+          delete group[from];
+        }
+      }
       const rolesGrouped = {};
       this.roles.forEach(role => {
         if (!rolesGrouped[role.team]) {
@@ -126,6 +132,11 @@ export default {
         rolesGrouped[role.team].push(role);
       });
       delete rolesGrouped["traveler"];
+
+      moveGroup(rolesGrouped, "townsfolk", "镇民");
+      moveGroup(rolesGrouped, "outsider", "外来者");
+      moveGroup(rolesGrouped, "minion", "爪牙");
+      moveGroup(rolesGrouped, "demon", "恶魔");
       return rolesGrouped;
     },
     playersByRole: function() {
@@ -240,7 +251,7 @@ h3 {
   h4 {
     text-transform: uppercase;
     text-align: center;
-    transform: rotate(90deg);
+    // transform: rotate(90deg);
     transform-origin: center;
     font-size: 80%;
   }
